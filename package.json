@@ -1,0 +1,17 @@
+{
+  "name": "subgraph-atlas-apps",
+  "version": "0.1.1",
+  "description": "",
+  "main": "apps.js",
+  "scripts": {
+    "start": "node apps.js"
+  },
+  "dependencies": {
+    "@apollo/subgraph": "2.0.2",
+    "apollo-server": "3.7.0",
+    "graphql": "16.5.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.0", import: ["@key", "@tag"])
+
+type Query {
+  getAtlasApps: [AtlasApp]
+  atlasApp(id: ID!): AtlasApp
+}
+
+type AtlasApp @key(fields:"id") {
+    id: ID! @tag(name: "test-from-atlas-apps")
+    name: String!
+    logo: String
+    baseUrl: String
+}

@@ -1,0 +1,14 @@
+name: "CI"
+on:
+  push
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Validate schema
+        run: |
+          bash validate-schema.sh
+        env:
+          SCHEMA_REGISTRY_TOKEN: ${{ secrets.SCHEMA_REGISTRY_TOKEN }}
