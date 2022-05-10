@@ -11,7 +11,7 @@ jobs:
         run: |
           curl -L -o xh.tar.gz https://github.com/ducaale/xh/releases/download/v0.16.0/xh-v0.16.0-x86_64-unknown-linux-musl.tar.gz
           tar xzf xh.tar.gz && mkdir -p "$HOME"/.local/bin/
-          sudo mv xh-*/xh "$HOME"/.local/bin/
+          mv xh-*/xh "$HOME"/.local/bin/
           chmod +x "$HOME"/.local/bin/xh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Validate
